@@ -22,7 +22,6 @@ function App() {
   const genericClickHandler = (e) => {
     e.preventDefault();
     const value  = e.target.innerHTML;
-    alert(value)
     console.log(value);
   }
 
