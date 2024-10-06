@@ -17,17 +17,32 @@ function Display({ display }) {
   );
 }
 
+function NameHeader() {
+  return(
+    <div className='NameTitle'>
+     <h1>JOHN MARK SALAS BSIT - 3A</h1>
+    </div>
+  )
+}
+
 function App() {
   const [disp, setDisp] = useState(0);
   const [num1, setNum1] = useState(null);
   const [num2, setNum2] = useState(null);
   const [op, setOp] = useState(null);
 
+  const nameClickHandler = (e) => {
+    e.preventDefault();
+    setDisp("John Mark Salas");
+    setNum1(null);
+    setNum2(null);
+    setOp(null);
+  };
+
   const genericClickHandler = (e) => {
     e.preventDefault();
     const value = e.target.innerHTML;
     
-    // Handle the "C" button
     if (value.toLowerCase() === 'c') {
       setDisp(0);
       setNum1(null);
@@ -102,6 +117,9 @@ function App() {
   return (
     <div className="App">
       <div className="CalcContainer">
+        <div>
+          <NameHeader />
+        </div>
         <div className="DispContainer">
           <Display display={disp} />
         </div>
@@ -122,6 +140,7 @@ function App() {
           <Key label={0} clickHandler={numClickHandler} />
           <Key label={"="} clickHandler={eqClickHandler} />
           <Key label={"+"} clickHandler={opClickHandler} />
+          <Key label={"Salas"} clickHandler={nameClickHandler} />
         </div>
       </div>
     </div>
