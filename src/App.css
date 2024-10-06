@@ -36,7 +36,7 @@
 }
 
 .ButtonsContainer button {
-  border: 1px solid orange;
+  border: 2px solid orange;
   margin-top: 5px;
   margin-left: 50px;
   background-color: black;
@@ -90,6 +90,7 @@
 .ButtonsContainer :nth-child(15) {
   background-color: orange;
   color: black;
+  box-shadow: ;
 }
 
 .ButtonsContainer :nth-child(16) {
@@ -105,4 +106,19 @@
   border-radius: 25px;
 }
 
+.ButtonsContainer button:hover {
+  background-color: white;
+  cursor: pointer;
+  box-shadow: 0 0 10px orange;
+}
 
+.ButtonsContainer :nth-child(4):hover, 
+.ButtonsContainer :nth-child(8):hover, 
+.ButtonsContainer :nth-child(12):hover, 
+.ButtonsContainer :nth-child(13):hover, 
+.ButtonsContainer :nth-child(15):hover, 
+.ButtonsContainer :nth-child(16):hover {
+  background-color: white;
+  cursor: pointer;
+  box-shadow: 0 0 10px orange;
+}
